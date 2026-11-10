@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jan Ralph Placido — IT Technical Support & Network Systems Administration</title>
+<meta name="description" content="Portfolio of Jan Ralph Placido: IT technical support (L1/L2), Microsoft 365, Active Directory, Windows Server, networking and virtualization. Based in Davao, Philippines.">
+<meta property="og:title" content="Jan Ralph Placido — IT Technical Support & Network Systems Administration">
+<meta property="og:description" content="L1/L2 support, Microsoft 365, Active Directory, networking and virtualization. Davao, Philippines.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16213a; --navy-2:#1f2d4d; --blue:#2f6fe4; --blue-soft:#8fb3f5;
+  --panel:#f1f3f6; --paper:#ffffff; --ink:#16213a; --muted:#4d566a; --line:#b8bcc5;
+  --head:"Poppins",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.65;font-size:16px}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto}
+
+/* Header: navy slab with the CV's diagonal cut */
+header.top{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+header.top .wrap{display:grid;grid-template-columns:minmax(0,420px) 1fr;min-height:150px}
+.name-block{padding:32px 24px 32px 32px;position:relative;z-index:1}
+.name-block h1{font:700 clamp(2rem,4.2vw,2.9rem)/1.05 var(--head);letter-spacing:.01em;text-transform:uppercase}
+.name-block p{margin-top:12px;color:var(--blue-soft);font:500 .98rem/1.35 var(--body);text-transform:uppercase;letter-spacing:.03em}
+.contact-slab{background:var(--paper);clip-path:polygon(70px 0,100% 0,100% 100%,0 100%);display:grid;grid-template-columns:repeat(3,1fr);align-items:center;padding-left:70px}
+.contact-slab a{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 12px;color:var(--ink);text-decoration:none;font-size:.92rem;text-align:center;border-left:3px solid #c6c9d0;height:70%;justify-content:center;word-break:break-word}
+.contact-slab a:first-child{border-left:0}
+.contact-slab a:hover span.t{text-decoration:underline}
+.ico{width:40px;height:40px;border-radius:50%;background:var(--navy);display:grid;place-items:center;flex:none}
+.ico svg{width:20px;height:20px;fill:#fff}
+
+/* Body: light sidebar + timeline column */
+main .wrap{display:grid;grid-template-columns:minmax(0,350px) 1fr;}
+aside{background:var(--panel);padding:0 0 48px}
+.photo{width:208px;height:208px;border-radius:50%;border:5px solid #fff;box-shadow:0 0 0 2px #dfe3ea;margin:-24px auto 36px 71px;overflow:hidden;background:#dde;position:relative;z-index:2}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.side-sec{padding:0 28px;margin-bottom:34px}
+.sec-title{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.sec-title .ico{width:46px;height:46px}
+.sec-title .ico svg{width:24px;height:24px}
+.sec-title h2{font:600 1.15rem/1.2 var(--head);text-transform:uppercase;letter-spacing:.02em}
+.sec-title::after{content:"";flex:1;height:3px;background:#a9aeb8;min-width:20px}
+.summary{font-size:.93rem;color:var(--muted);text-align:left}
+.skills{list-style:none}
+.skills li{position:relative;padding:7px 0 7px 18px;font-size:.92rem;color:#27304a}
+.skills li::before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--navy)}
+
+.content{padding:40px 40px 64px 44px;min-width:0}
+.content .sec-title{margin-bottom:28px}
+.content .sec-title h2{font-size:1.4rem}
+
+/* Timeline */
+.timeline{position:relative;list-style:none;margin-bottom:56px}
+.timeline::before{content:"";position:absolute;left:5px;top:10px;bottom:0;width:3px;background:var(--line)}
+.job{position:relative;padding:0 0 34px 34px}
+.job::before{content:"";position:absolute;left:-1px;top:7px;width:15px;height:15px;border-radius:50%;background:var(--navy)}
+.job-head{display:flex;flex-wrap:wrap;gap:4px 24px;align-items:baseline}
+.date{font-size:.9rem;color:var(--muted);font-weight:500;min-width:86px}
+.job h3{font:600 1.05rem/1.3 var(--head)}
+.org{font-size:.92rem;color:var(--blue);font-weight:500;margin:2px 0 10px}
+.org i{font-style:normal;color:var(--line);margin:0 6px}
+.job ul{list-style:disc;padding-left:20px;font-size:.93rem;color:#27304a;max-width:70ch}
+.job li{margin-bottom:5px}
+.job li::marker{color:var(--navy)}
+.job.has-date{padding-left:34px}
+.job-body{margin-left:110px}
+.job-head .date{position:absolute;left:34px;top:4px}
+.job-head h3{margin-left:110px}
+.job .org{margin-left:110px}
+
+.edu h3{font:600 1.05rem/1.35 var(--head)}
+.edu .org{margin-bottom:0}
+
+/* Tools */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px 32px;margin-bottom:56px}
+.tool-group h3{font:600 .98rem/1.3 var(--head);margin-bottom:10px;padding-bottom:8px;border-bottom:3px solid var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:7px;list-style:none}
+.chips li{background:var(--panel);border-left:3px solid var(--navy);padding:4px 11px;font-size:.86rem;color:#27304a}
+
+.certs{list-style:none;margin-bottom:40px}
+.certs li{display:flex;gap:18px;padding:10px 0;border-bottom:1px solid #e1e4ea;font-size:.95rem}
+.certs b{font:600 .9rem var(--head);color:var(--blue);min-width:48px}
+.more{font-size:.95rem;color:#27304a;list-style:none}
+.more li{padding:4px 0}
+
+footer{background:var(--navy);color:#c8d3ea;font-size:.88rem}
+footer .wrap{padding:26px 32px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+footer a{color:#fff}
+
+/* Tablet / mobile */
+@media (max-width:980px){
+  header.top .wrap{grid-template-columns:1fr}
+  .contact-slab{clip-path:none;padding-left:0;grid-template-columns:1fr;background:var(--paper)}
+  .contact-slab a{flex-direction:row;justify-content:flex-start;border-left:0;border-top:1px solid #e1e4ea;height:auto;padding:14px 24px;text-align:left}
+  .contact-slab a:first-child{border-top:0}
+  main .wrap{grid-template-columns:1fr}
+  .photo{margin:32px auto 30px}
+  .content{padding:36px 24px 56px}
+}
+@media (max-width:560px){
+  .name-block{padding:28px 22px}
+  .job-head .date{position:static;display:block}
+  .job-head h3,.job .org{margin-left:0}
+  .job{padding-left:28px}
+  .job-body{margin-left:0}
+  .side-sec{padding:0 22px}
+}
+@media print{
+  header.top,aside,.ico{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="name-block">
+      <h1>Jan Ralph<br>Placido</h1>
+      <p>IT Technical Support &amp; Network Systems Administration</p>
+    </div>
+    <nav class="contact-slab" aria-label="Contact">
+      <a href="tel:+639702733082">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.300.2 2.500.6 3.600.1.300 0 .700-.2 1l-2.300 2.200z"/></svg></span>
+        <span class="t">+63 970 273 3082</span>
+      </a>
+      <a href="mailto:janralphplacido@gmail.com">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.200L4.500 7v.1L12 13l7.500-5.900V7L12 12.200z"/></svg></span>
+        <span class="t">janralphplacido@gmail.com</span>
+      </a>
+      <a href="#experience">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.200 7 13 7 13s7-7.800 7-13a7 7 0 0 0-7-7zm0 9.500A2.500 2.500 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg></span>
+        <span class="t">Davao, Philippines</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <aside>
+    <div class="photo"><img src="photo.jpg" alt="Portrait of Jan Ralph Placido" width="269" height="359"></div>
+
+    <section class="side-sec" aria-labelledby="summary-h">
+      <div class="sec-title">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7.500" r="4.200"/><path d="M3.500 21c0-4.700 3.800-8 8.500-8s8.500 3.300 8.500 8z"/></svg></span>
+        <h2 id="summary-h">Professional Summary</h2>
+      </div>
+      <p class="summary">IT professional and Bachelor of Science in Information Technology graduate majoring in Software Technology, with experience in IT administration, Level 1/Level 2 technical support, system implementation, and network troubleshooting. Background includes supporting Windows environments, user accounts, Microsoft 365, network connectivity, servers, virtualization, and endpoint issues. Detail-oriented and service-focused, with experience supporting users and maintaining day-to-day IT operations.</p>
+    </section>
+
+    <section class="side-sec" aria-labelledby="skills-h">
+      <div class="sec-title">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.500 7 3.500 12l5 5 1.400-1.400L6.300 12l3.600-3.600zm7 0-1.400 1.400 3.600 3.600-3.600 3.600 1.400 1.400 5-5zM13.300 5l-3.200 14h1.900l3.200-14z"/></svg></span>
+        <h2 id="skills-h">Core Technical Skills</h2>
+      </div>
+      <ul class="skills">
+        <li>Level 1 and Level 2 IT support; incident troubleshooting and escalation</li>
+        <li>Windows OS, PC hardware, software, printers, and remote support</li>
+        <li>Microsoft 365 applications, Admin Center, and Entra ID</li>
+        <li>Active Directory and Group Policy administration</li>
+        <li>Windows Server, DNS, and DHCP</li>
+        <li>LAN/WAN, routers, switches, Wi-Fi, and network connectivity</li>
+        <li>Firewall configuration and troubleshooting; VPN support</li>
+        <li>VMware, Hyper-V, and virtual machine management</li>
+        <li>System implementation, user support, and technical documentation</li>
+        <li>Basic webpage design and programming fundamentals</li>
+      </ul>
+    </section>
+  </aside>
+
+  <div class="content">
+
+    <section id="experience" aria-labelledby="exp-h">
+      <div class="sec-title">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6a1 1 0 0 1 1 1v2h4a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h4V5a1 1 0 0 1 1-1zm1 2v1h4V6z"/></svg></span>
+        <h2 id="exp-h">Experience</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="job">
+          <div class="job-head"><span class="date">2022–2026</span><h3>IT Support and System Implementation Staff (L1/L2)</h3></div>
+          <p class="org">Tagum Agricultural Development Company, Inc.<i>|</i>Panabo City</p>
+          <ul class="job-body">
+            <li>Provided Level 1 and Level 2 technical support for user-facing IT issues, including Windows, hardware, software, account access, and connectivity concerns.</li>
+            <li>Troubleshot network and infrastructure issues involving LAN/WAN connectivity, routers, switches, wireless networks, DNS, and DHCP.</li>
+            <li>Supported Microsoft 365 accounts and applications, user access, and basic identity administration.</li>
+            <li>Worked with Active Directory and Group Policy for user and system administration tasks.</li>
+            <li>Assisted with Windows Server, VPN, firewall, and remote administration troubleshooting.</li>
+            <li>Supported virtual environments and virtual machine operations using VMware and Hyper-V.</li>
+            <li>Assisted with IT system implementation and operational support, following issues through investigation and resolution.</li>
+            <li>Communicated technical issues and resolutions to users and relevant team members.</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job-head"><span class="date">2018–2022</span><h3>IT Administrator Head</h3></div>
+          <p class="org">Gig Oca Robles Seamen’s Hospital<i>|</i>Davao City</p>
+          <ul class="job-body">
+            <li>Handled day-to-day IT administration and technical support for the organization’s computer systems and users.</li>
+            <li>Troubleshot desktop computers, Windows operating systems, software, printers, and other IT peripherals.</li>
+            <li>Supported network connectivity and infrastructure, including LAN/WAN, routers, switches, and Wi-Fi.</li>
+            <li>Performed user account and access support and helped maintain reliable access to IT resources.</li>
+            <li>Coordinated technical issue resolution and provided assistance to employees experiencing computer, software, or connectivity problems.</li>
+            <li>Supported the maintenance and continuity of IT operations through routine troubleshooting and follow-up.</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job-head"><span class="date">2024–2025</span><h3>IT Administrator</h3></div>
+          <p class="org">Vostro PH Davao</p>
+          <ul class="job-body">
+            <li>Provided IT administration and technical support for computer systems, users, and related technology services.</li>
+            <li>Investigated and resolved common hardware, software, operating system, and connectivity issues.</li>
+            <li>Assisted users with account access, system configuration, and day-to-day technical concerns.</li>
+            <li>Supported network and endpoint troubleshooting and escalated issues requiring additional technical attention.</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job-head"><span class="date">2017–2018</span><h3>Computer Technician</h3></div>
+          <p class="org">Computerworld Marketing<i>|</i>Davao City</p>
+          <ul class="job-body">
+            <li>Performed computer hardware and software troubleshooting and basic repair support.</li>
+            <li>Diagnosed desktop computer issues and assisted with operating system and application-related problems.</li>
+            <li>Helped customers address computer performance, peripheral, and general technical concerns.</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job-head"><span class="date">2017</span><h3>ICT Instructor</h3></div>
+          <p class="org">Temple Christian School Inc.<i>|</i>Santo. Tomas, Davao del Norte</p>
+          <ul class="job-body">
+            <li>Delivered ICT-related instruction and assisted learners with computer and software fundamentals.</li>
+            <li>Guided students in using computer applications and completing practical computer-based activities.</li>
+            <li>Provided basic troubleshooting assistance for classroom computers and related equipment.</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job-head"><span class="date">2016</span><h3>HR Staff – PEM Section</h3></div>
+          <p class="org">Tagum Agricultural Development Company, Inc.<i>|</i>Panabo City</p>
+          <ul class="job-body">
+            <li>Supported human resources administrative activities within the PEM section.</li>
+            <li>Assisted with clerical tasks, records handling, data encoding, and general office coordination.</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job-head"><span class="date">2015</span><h3>Computer Staff / Assistant Registrar</h3></div>
+          <p class="org">La Libertad National High School<i>|</i>Santo. Tomas, Davao del Norte</p>
+          <ul class="job-body">
+            <li>Assisted with computer-based administrative work, data encoding, and document preparation.</li>
+            <li>Supported registrar-related clerical tasks and the organization of school records.</li>
+            <li>Provided basic computer assistance for routine office activities.</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job-head"><span class="date">2015</span><h3>Computer Hardware Technician – On-the-Job Training</h3></div>
+          <p class="org">ITLinq Globe<i>|</i>Tagum City</p>
+          <ul class="job-body">
+            <li>Completed on-the-job training in computer hardware servicing and basic technical support.</li>
+            <li>Assisted with basic computer inspection, troubleshooting, and hardware-related tasks.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section id="tools" aria-labelledby="tools-h">
+      <div class="sec-title">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-6v2h3v2H7v-2h3v-2H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm1 2v9h14V6z"/></svg></span>
+        <h2 id="tools-h">Tools</h2>
+      </div>
+      <div class="tools">
+        <div class="tool-group"><h3>Microsoft 365 &amp; Office Administration</h3>
+          <ul class="chips"><li>Microsoft 365 Admin Center</li><li>Outlook</li><li>Teams</li><li>Word</li><li>Excel</li><li>OneDrive</li><li>SharePoint</li><li>Entra ID</li></ul></div>
+        <div class="tool-group"><h3>IT Administration &amp; User Management</h3>
+          <ul class="chips"><li>Active Directory</li><li>Group Policy (GPO)</li><li>Windows Server 2019/2022</li><li>User Account Management</li><li>Access Permissions</li><li>Remote Desktop Support</li></ul></div>
+        <div class="tool-group"><h3>Helpdesk &amp; Task Management</h3>
+          <ul class="chips"><li>Zendesk</li><li>Trello</li><li>Microsoft Planner</li><li>AnyDesk</li></ul></div>
+        <div class="tool-group"><h3>AI &amp; Productivity Tools</h3>
+          <ul class="chips"><li>ChatGPT</li><li>Claude AI (currently learning)</li><li>AI-assisted documentation and administrative workflows</li></ul></div>
+        <div class="tool-group"><h3>Documentation &amp; File Management</h3>
+          <ul class="chips"><li>Excel tracking and reporting</li><li>Word document formatting</li><li>SharePoint Document Libraries</li><li>OneDrive File Management</li><li>Document Version Control</li><li>Digital Records Management</li></ul></div>
+        <div class="tool-group"><h3>Other IT Tools</h3>
+          <ul class="chips"><li>Bitdefender GravityZone</li><li>OPNsense</li><li>pfSense</li><li>VMware</li><li>Hyper-V</li><li>Synology NAS</li></ul></div>
+      </div>
+    </section>
+
+    <section id="education" aria-labelledby="edu-h">
+      <div class="sec-title">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.900V17h2V9zM5 13.200V17c0 1.700 3.100 3 7 3s7-1.300 7-3v-3.800l-7 3.800z"/></svg></span>
+        <h2 id="edu-h">Education</h2>
+      </div>
+      <ol class="timeline" style="margin-bottom:56px">
+        <li class="job edu">
+          <div class="job-head"><span class="date">2011–2015</span><h3>Bachelor of Science in Information Technology, Major in Software Technology</h3></div>
+          <p class="org">Bukidnon State University – Santo. Tomas External Studies Center</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="certifications" aria-labelledby="cert-h">
+      <div class="sec-title">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.400 5 5.600.7-4.100 3.800 1.100 5.500L12 14.300 7 17l1.100-5.500L4 7.700 9.600 7z"/></svg></span>
+        <h2 id="cert-h">Certifications &amp; Professional Training</h2>
+      </div>
+      <ul class="certs">
+        <li><b>2012</b><span>TESDA Computer Hardware Servicing (CHS) NC II – Passer</span></li>
+        <li><b>2015</b><span>TESDA NC II Assistant Assessor / Speaker</span></li>
+        <li><b>2017</b><span>Asus Service Engineer Seminar</span></li>
+        <li><b>2017</b><span>Acer Service Engineer Seminar</span></li>
+        <li><b>2017</b><span>Seagate Product Training</span></li>
+      </ul>
+
+      <div class="sec-title"><h2>Additional Information</h2></div>
+      <ul class="more">
+        <li>Languages: English, Tagalog, and Bisaya</li>
+        <li>Additional experience: LiDAR top-down mapping annotation and review – Remotask PH (2022)</li>
+      </ul>
+    </section>
+
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Jan Ralph Placido</span>
+    <span><a href="mailto:janralphplacido@gmail.com">janralphplacido@gmail.com</a> · <a href="tel:+639702733082">+63 970 273 3082</a></span>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
